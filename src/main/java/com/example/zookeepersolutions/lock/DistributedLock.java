@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * implement distributed lock with zookeeper
+ */
 public class DistributedLock implements Watcher {
 
     private ZooKeeper zooKeeper;
