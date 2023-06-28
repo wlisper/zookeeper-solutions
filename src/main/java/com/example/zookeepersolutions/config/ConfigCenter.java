@@ -42,6 +42,7 @@ public class ConfigCenter implements Watcher {
                 byte[] data = zooKeeper.getData(configPath, false, null);
                 // update local config.
                 System.out.println("Config updated: " + new String(data));
+                zooKeeper.exists(configPath, this);  // register watcher once again
             } catch (Exception e) {
                 e.printStackTrace();
             }
